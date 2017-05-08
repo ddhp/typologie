@@ -82,14 +82,14 @@ export default class App extends Component {
           <div className="nav__center"><a href="#lePremierNumero" onClick={this.onLinkClick}>n°1 - La boule de pétanque</a></div>
           <div className="nav__right"><a href="#aPropos" onClick={this.onLinkClick}>Infos</a></div>
           <div className="nav__bottom">
-            <a className="nav__bottom__row underline">Support us</a>
+            <a className="nav__bottom__row"><span className="underline">Support us</span></a>
             <div className="nav__bottom__row">
-              <span className="underline">Follow us</span><br />
+              <div className="header"><span className="underline">Follow us</span></div>
               <a className="underline" href="https://www.instagram.com/collectiontypologie/" target="_blank">Instagram</a>
               <span> / </span>
               <a className="underline" href="https://www.facebook.com/collectionstypologie/posts_to_page/" target="_blank">Facebook</a>
             </div>
-            <a className="nav__bottom__row underline" href="#contacts" onClick={this.onLinkClick}>contact</a>
+            <a className="nav__bottom__row" href="#contacts" onClick={this.onLinkClick}><span className="underline">contact</span></a>
           </div>
         </nav>
 
@@ -101,7 +101,7 @@ export default class App extends Component {
           <h2>A propos</h2>
           <p>
             Typologie est une revue bi-annuelle qui s’intéresse aux objets ordinaires. Elle souhaite attirer l’attention des lecteurs sur l’intelligence
-            et la poésie de certains objets de consommation courante que leur évidence dissimule. Chaque numéro sera consacré à une typologie d’objet dont elle racontera la fabrication, l’histoire et l’usage à travers des images d’archives, des photographies originales, des textes et une interview croisée. Riche de 56 pages et illustrée de 65 reproductions bichromatiques, la revue sera vendue au prix de 12 euros. Elle est co-éditée par les Collections Typologie et les Editions B42.<br />
+            et la poésie de certains objets de consommation courante que leur évidence dissimule. Chaque numéro sera consacré à une typologie d’objet dont elle racontera la fabrication, l’histoire et l’usage à travers des images d’archives, des photographies originales, des textes et une interview croisée. Riche de 56 pages et illustrée de 65 reproductions bichromatiques, la revue sera vendue au prix de 12 euros. Elle est co-éditée par les Collections Typologie et les Editions B42.<br /><br />
             Fondée par six jeunes designers industriels passionnés des formes, la collection tire parti de leur sensibilité pour donner une vision différente et approfondie des objets usuels qui nous entourent. La boule de pétanque, le bouchon en liège, la cagette, le carreau de terre cuite, le verre à pied ...
           </p>
 

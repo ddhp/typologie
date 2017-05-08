@@ -39,6 +39,8 @@ h2 {
 
 a {
   color: #000;
+  text-decoration: none;
+
   &:visited {
     color: #000;
   }
@@ -52,6 +54,7 @@ section {
     display: inline-block;
     width: 40%;
     margin-right: 20%;
+    line-height: 1.2rem;
   }
 }
 
@@ -76,29 +79,50 @@ nav {
     display: inline-block;
     font-family: 'Arnhem';
     width: calc(100%/3);
+    font-size: 1.1rem;
+
+    a:hover {
+      padding-bottom: 2px;
+      border-bottom: 1.5px solid;
+    }
   }
 
   .nav__center {
     display: inline-block;
     width: calc(100%/3);
     text-align: center;
+
+    a:hover {
+      padding-bottom: 2px;
+      border-bottom: 1.5px solid;
+    }
   }
 
   .nav__right {
     display: inline-block;
     width: calc(100%/3);
     text-align: right;
+
+    a:hover {
+      padding-bottom: 2px;
+      border-bottom: 1.5px solid;
+    }
   }
 
   .nav__bottom {
     position: absolute;
     font-family: 'Arnhem';
     text-align: center;
-    right: 10%;
+    right: 11%;
     bottom: 10%;
-    font-size: 1.1rem;
+
     .underline {
-      text-decoration: underline;
+      padding-bottom: 2px;
+      border-bottom: 1.5px solid;
+    }
+
+    .header {
+      margin-bottom: 0.2rem;
     }
 
     .nav__bottom__row {
@@ -110,8 +134,9 @@ nav {
 
 .landing {
   img {
-    width: 80%;
+    width: 65%;
     margin-top: 15vh;
+    margin-left: 1%;
   }
 }
 
@@ -122,12 +147,16 @@ nav {
 }
 
 .le-premier-numero {
+  text-align: center;
+
   p {
     margin-right: 60%;
+    text-align: left;
   }
 
   img {
-    width: 100%;
+    margin: 0 auto;
+    width: 65%;
   }
 }
 
