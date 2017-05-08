@@ -1,0 +1,141 @@
+@font-face {
+  font-family: 'AkzidenzGrotesk';
+  src: url('fonts/AkzidenzGrotesk/AkzidenzGrotesk-Bold1.eot'); /* IE9 Compat Modes */
+  src: url('fonts/AkzidenzGrotesk/AkzidenzGrotesk-Bold1.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('fonts/AkzidenzGrotesk/AkzidenzGrotesk-Bold1.woff') format('woff'), /* Modern Browsers */
+  url('fonts/AkzidenzGrotesk/AkzidenzGrotesk-Bold1.ttf') format('truetype'), /* Safari, Android, iOS */
+  url('fonts/AkzidenzGrotesk/AkzidenzGrotesk-Bold1.svg#AkzidenzGrotesk-Bold') format('svg'); /* Legacy iOS */
+  font-style: normal;
+  font-weight: bold;
+  text-rendering: optimizeLegibility;
+}
+
+@font-face {
+  font-family: 'Arnhem';
+  src: url('fonts/Arnhem/Arnhem-Normal.eot'); /* IE9 Compat Modes */
+  src: url('fonts/Arnhem/Arnhem-Normal.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('fonts/Arnhem/Arnhem-Normal.woff') format('woff'), /* Modern Browsers */
+  url('fonts/Arnhem/Arnhem-Normal.ttf') format('truetype'), /* Safari, Android, iOS */
+  url('fonts/Arnhem/Arnhem-Normal.svg#Arnhem-Normal') format('svg'); /* Legacy iOS */
+  font-style: normal;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
+}
+
+html {
+  font-size: 130%;
+}
+
+body {
+  font-family: 'AkzidenzGrotesk';
+  margin: 0 auto;
+  padding: 1rem 4%;
+}
+
+h2 {
+  font-size: 1rem;
+  text-decoration: underline;
+}
+
+a {
+  color: #000;
+  &:visited {
+    color: #000;
+  }
+}
+
+section {
+  position: relative;
+  margin-bottom: 10rem;
+
+  p {
+    display: inline-block;
+    width: 40%;
+    margin-right: 20%;
+  }
+}
+
+.main {
+  opacity: 0;
+  transition: opacity 200ms ease-in-out;
+
+  &.is-shown {
+    opacity: 1;
+  }
+}
+
+nav {
+  position: fixed;
+  z-index: 1;
+  top: 1rem;
+  right: 4%;
+  left: 4%;
+  bottom: 0;
+
+  .nav__left {
+    display: inline-block;
+    font-family: 'Arnhem';
+    width: calc(100%/3);
+  }
+
+  .nav__center {
+    display: inline-block;
+    width: calc(100%/3);
+    text-align: center;
+  }
+
+  .nav__right {
+    display: inline-block;
+    width: calc(100%/3);
+    text-align: right;
+  }
+
+  .nav__bottom {
+    position: absolute;
+    font-family: 'Arnhem';
+    text-align: center;
+    right: 10%;
+    bottom: 10%;
+    font-size: 1.1rem;
+    .underline {
+      text-decoration: underline;
+    }
+
+    .nav__bottom__row {
+      display: block;
+      margin-bottom: 1.5rem;
+    }
+  }
+}
+
+.landing {
+  img {
+    width: 80%;
+    margin-top: 15vh;
+  }
+}
+
+.a-propos {
+  img {
+    width: 40%;
+  }
+}
+
+.le-premier-numero {
+  p {
+    margin-right: 60%;
+  }
+
+  img {
+    width: 100%;
+  }
+}
+
+.contacts {
+  img {
+    width: 30%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+}

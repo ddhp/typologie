@@ -1,0 +1,12 @@
+/* Webfont: AkzidenzGrotesk-Roman */@font-face {
+    font-family: 'AkzidenzGrotesk';
+    src: url('AkzidenzGrotesk-Roman1.eot'); /* IE9 Compat Modes */
+    src: url('AkzidenzGrotesk-Roman1.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('AkzidenzGrotesk-Roman1.woff') format('woff'), /* Modern Browsers */
+         url('AkzidenzGrotesk-Roman1.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('AkzidenzGrotesk-Roman1.svg#AkzidenzGrotesk-Roman') format('svg'); /* Legacy iOS */
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+

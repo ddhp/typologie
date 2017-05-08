@@ -1,0 +1,12 @@
+/* Webfont: AkzidenzGrotesk-Bold */@font-face {
+    font-family: 'AkzidenzGrotesk';
+    src: url('AkzidenzGrotesk-Bold1.eot'); /* IE9 Compat Modes */
+    src: url('AkzidenzGrotesk-Bold1.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('AkzidenzGrotesk-Bold1.woff') format('woff'), /* Modern Browsers */
+         url('AkzidenzGrotesk-Bold1.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('AkzidenzGrotesk-Bold1.svg#AkzidenzGrotesk-Bold') format('svg'); /* Legacy iOS */
+    font-style: normal;
+    font-weight: bold;
+    text-rendering: optimizeLegibility;
+}
+
