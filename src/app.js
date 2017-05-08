@@ -98,7 +98,7 @@ export default class App extends Component {
         </section>
 
         <section id="aPropos" className="a-propos" ref="aPropos">
-          <h2>A propos</h2>
+          <h2><span>A propos</span></h2>
           <p>
             Typologie est une revue bi-annuelle qui s’intéresse aux objets ordinaires. Elle souhaite attirer l’attention des lecteurs sur l’intelligence
             et la poésie de certains objets de consommation courante que leur évidence dissimule. Chaque numéro sera consacré à une typologie d’objet dont elle racontera la fabrication, l’histoire et l’usage à travers des images d’archives, des photographies originales, des textes et une interview croisée. Riche de 56 pages et illustrée de 65 reproductions bichromatiques, la revue sera vendue au prix de 12 euros. Elle est co-éditée par les Collections Typologie et les Editions B42.<br /><br />
@@ -109,7 +109,7 @@ export default class App extends Component {
         </section>
 
         <section id="lePremierNumero" className="le-premier-numero" ref="lePremierNumero">
-          <h2>Le premier numéro :</h2>
+          <h2><span>Le premier numéro :</span></h2>
           <p>
             Le premier objet présenté dans Typologie est
             la boule de pétanque. Elle est parfaitement banale en apparence mais son étude révèle un contenu insoupçonné : sa  liation avec la tradition universelle des jeux de boules, une histoire moderne et populaire, une fabrication industrielle sophistiquée, succession de différents procédés que la constante de sa forme permet de mettre en évidence. Mais aussi un contenu sociologique, des règles, un cadre, un glossaire, une gestuelle, et même une philosophie de vie...<br />
@@ -123,7 +123,7 @@ export default class App extends Component {
         </section>
 
         <section id="contacts" className="contacts" ref="contacts">
-          <h2>Contacts:</h2>
+          <h2><span>Contacts:</span></h2>
           <p>
             La revue Typologie est dirigée par Raphaël Daufresne et Thélonious Goupil.<br /><br />
             Il a été imaginé par les membres des Collections Typologie. Ce collectif est formé par sept designers industriels : Guillaume Bloget, Raphaël Daufresne, Adrien Goubet, Thélonious Goupil, Guillaume Jandin, Alexandre d’Orsetti et Yun Li.<br /><br />
