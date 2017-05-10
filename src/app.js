@@ -98,7 +98,7 @@ export default class App extends Component {
         </section>
 
         <section id="aPropos" className="a-propos" ref="aPropos">
-          <h2><span>A propos</span></h2>
+          <h2><span>A propos :</span></h2>
           <p>
             Typologie est une revue bi-annuelle qui s’intéresse aux objets ordinaires. Elle souhaite attirer l’attention des lecteurs sur l’intelligence
             et la poésie de certains objets de consommation courante que leur évidence dissimule. Chaque numéro sera consacré à une typologie d’objet dont elle racontera la fabrication, l’histoire et l’usage à travers des images d’archives, des photographies originales, des textes et une interview croisée. Riche de 56 pages et illustrée de 65 reproductions bichromatiques, la revue sera vendue au prix de 12 euros. Elle est co-éditée par les Collections Typologie et les Editions B42.<br /><br />
@@ -123,7 +123,7 @@ export default class App extends Component {
         </section>
 
         <section id="contacts" className="contacts" ref="contacts">
-          <h2><span>Contacts:</span></h2>
+          <h2><span>Contacts :</span></h2>
           <p>
             La revue Typologie est dirigée par Raphaël Daufresne et Thélonious Goupil.<br /><br />
             Il a été imaginé par les membres des Collections Typologie. Ce collectif est formé par sept designers industriels : Guillaume Bloget, Raphaël Daufresne, Adrien Goubet, Thélonious Goupil, Guillaume Jandin, Alexandre d’Orsetti et Yun Li.<br /><br />
