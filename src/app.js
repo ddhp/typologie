@@ -107,7 +107,7 @@ export default class App extends Component {
         </nav>
 
         <div className="nav__bottom">
-          <a className="nav__bottom__row"><span className="underline">Support us</span></a>
+          <a className="nav__bottom__row" href="https://www.kickstarter.com/projects/329839494/641184402?token=5cd621ce"><span className="underline">Support us</span></a>
           <div className="nav__bottom__row">
           <div className="header"><span className="underline">Follow us</span></div>
           <a className="underline" href="https://www.instagram.com/collectiontypologie/" target="_blank">Instagram</a>
