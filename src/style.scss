@@ -27,7 +27,8 @@ html {
 }
 
 body {
-  font-family: 'AkzidenzGrotesk';
+  font-family: Arial;
+  font-weight: bold;
   margin: 0 auto;
   padding: 1rem 4%;
 }
@@ -84,6 +85,7 @@ nav {
   .nav__left {
     display: inline-block;
     font-family: 'Arnhem';
+    font-weight: normal;
     width: calc(100%/3);
     font-size: 1.1rem;
 
@@ -120,6 +122,7 @@ nav {
   position: fixed;
   z-index: 2;
   font-family: 'Arnhem';
+  font-weight: normal;
   text-align: center;
   right: 12%;
   bottom: 10%;
