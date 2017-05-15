@@ -1,6 +1,8 @@
 import React, {PropTypes, Component} from 'react'
-import classNames from 'classnames';
+import classNames from 'classnames'
 import animateScrollTo from 'animated-scroll-to'
+import FR from './fr';
+import EN from './en';
 
 export default class App extends Component {
   // static propTypes = {
@@ -10,25 +12,14 @@ export default class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      isShown: false
+      isShown: false,
+      currentLang: 'FR'
+      
     }
     this.onClick = this.onClick.bind(this)
     this.scrollTo = this.scrollTo.bind(this)
     this.onLinkClick = this.onLinkClick.bind(this)
-  }
-
-  componentDidMount() {
-    this.setState({
-      isShown: true
-    })
-    const hash = location.hash.slice(1)
-    if (hash) {
-      this.scrollTo(hash)
-    }
-  }
-
-  componentWillReceiveProps() {
-    console.log('receiverd');
+    this.onLangSwitch = this.onLangSwitch.bind(this)
   }
 
   scrollTo(target) {
@@ -70,7 +61,39 @@ export default class App extends Component {
     console.log('click');
   }
 
+  onLangSwitch(e) {
+    const targetLang = e.currentTarget.getAttribute('data-lang')
+    this.setState({
+      currentLang: targetLang
+    })
+  }
+
+  componentDidMount() {
+    this.setState({
+      isShown: true
+    })
+    const hash = location.hash.slice(1)
+    if (hash) {
+      this.scrollTo(hash)
+    }
+  }
+
+  componentWillReceiveProps() {
+    console.log('receiverd');
+  }
+
+  renderParapraph(ps) {
+    if (!Array.isArray(ps)) {
+      ps = [ps]
+    }
+    return ps.map((p, i) => {
+      return (<p key={i}>{p}</p>)
+    })
+  }
+
   render() {
+    const currentLangRef = this.state.currentLang === 'FR' ? FR : EN
+    
     return (
       <div 
         className={classNames('main', {
@@ -79,42 +102,52 @@ export default class App extends Component {
       >
         <nav>
           <div className="nav__left"><a href="#" onClick={this.onLinkClick}>Typologie</a></div>
-          <div className="nav__center"><a href="#lePremierNumero" onClick={this.onLinkClick}>n°1 - La boule de pétanque</a></div>
+          <div className="nav__center"><a href="#lePremierNumero" onClick={this.onLinkClick}>{currentLangRef.navCenter}</a></div>
           <div className="nav__right"><a href="#aPropos" onClick={this.onLinkClick}>Infos</a></div>
-          <div className="nav__bottom">
-            <a className="nav__bottom__row"><span className="underline">Support us</span></a>
-            <div className="nav__bottom__row">
-              <div className="header"><span className="underline">Follow us</span></div>
-              <a className="underline" href="https://www.instagram.com/collectiontypologie/" target="_blank">Instagram</a>
-              <span> / </span>
-              <a className="underline" href="https://www.facebook.com/collectionstypologie/posts_to_page/" target="_blank">Facebook</a>
-            </div>
-            <a className="nav__bottom__row" href="#contacts" onClick={this.onLinkClick}><span className="underline">contact</span></a>
-          </div>
         </nav>
+
+        <div className="nav__bottom">
+          <a className="nav__bottom__row"><span className="underline">Support us</span></a>
+          <div className="nav__bottom__row">
+          <div className="header"><span className="underline">Follow us</span></div>
+          <a className="underline" href="https://www.instagram.com/collectiontypologie/" target="_blank">Instagram</a>
+          <span> / </span>
+          <a className="underline" href="https://www.facebook.com/collectionstypologie/posts_to_page/" target="_blank">Facebook</a>
+          </div>
+          <a className="nav__bottom__row" href="#contacts" onClick={this.onLinkClick}><span className="underline">contact</span></a>
+        </div>
 
         <section className="landing" ref="landing">
           <img src="/static/photo_couverture_maquette_typologie.jpg" />
         </section>
 
         <section id="aPropos" className="a-propos" ref="aPropos">
-          <h2><span>A propos :</span></h2>
-          <p>
-            Typologie est une revue bi-annuelle qui s’intéresse aux objets ordinaires. Elle souhaite attirer l’attention des lecteurs sur l’intelligence
-            et la poésie de certains objets de consommation courante que leur évidence dissimule. Chaque numéro sera consacré à une typologie d’objet dont elle racontera la fabrication, l’histoire et l’usage à travers des images d’archives, des photographies originales, des textes et une interview croisée. Riche de 56 pages et illustrée de 65 reproductions bichromatiques, la revue sera vendue au prix de 12 euros. Elle est co-éditée par les Collections Typologie et les Editions B42.<br /><br />
-            Fondée par six jeunes designers industriels passionnés des formes, la collection tire parti de leur sensibilité pour donner une vision différente et approfondie des objets usuels qui nous entourent. La boule de pétanque, le bouchon en liège, la cagette, le carreau de terre cuite, le verre à pied ...
-          </p>
+          <h2>
+            <span>{currentLangRef.aPropos.title}</span>
+            <span className="span--lang">
+              <span 
+                className={classNames({active: this.state.currentLang === 'EN'})}
+                data-lang="EN"
+                onClick={this.onLangSwitch}
+              >
+                EN 
+              </span> / <span
+                className={classNames({active: this.state.currentLang === 'FR'})}
+                data-lang="FR"
+                onClick={this.onLangSwitch}
+              >
+                FR
+              </span>
+            </span>
+          </h2>
+          {this.renderParapraph(currentLangRef.aPropos.body)}
 
           <img src="/static/DSC_3958.jpg" />
         </section>
 
         <section id="lePremierNumero" className="le-premier-numero" ref="lePremierNumero">
-          <h2><span>Le premier numéro :</span></h2>
-          <p>
-            Le premier objet présenté dans Typologie est
-            la boule de pétanque. Elle est parfaitement banale en apparence mais son étude révèle un contenu insoupçonné : sa  liation avec la tradition universelle des jeux de boules, une histoire moderne et populaire, une fabrication industrielle sophistiquée, succession de différents procédés que la constante de sa forme permet de mettre en évidence. Mais aussi un contenu sociologique, des règles, un cadre, un glossaire, une gestuelle, et même une philosophie de vie...<br />
-            Quand au deuxième numéro, il sera consacré au bouchon en liège !
-          </p>
+          <h2><span>{currentLangRef.lePremierNumero.title}</span></h2>
+          {this.renderParapraph(currentLangRef.lePremierNumero.body)}
 
           <img src="/static/photo_interieur_3_maquette_typologie.jpg" />
           <img src="/static/photo_interieur_1_maquette_typologie2.jpg" />
@@ -123,13 +156,8 @@ export default class App extends Component {
         </section>
 
         <section id="contacts" className="contacts" ref="contacts">
-          <h2><span>Contacts :</span></h2>
-          <p>
-            La revue Typologie est dirigée par Raphaël Daufresne et Thélonious Goupil.<br /><br />
-            Il a été imaginé par les membres des Collections Typologie. Ce collectif est formé par sept designers industriels : Guillaume Bloget, Raphaël Daufresne, Adrien Goubet, Thélonious Goupil, Guillaume Jandin, Alexandre d’Orsetti et Yun Li.<br /><br />
-            contact@collectionstypologie.com<br />
-            @collectionstypologie
-          </p>
+          <h2><span>{currentLangRef.contacts.title}</span></h2>
+          {this.renderParapraph(currentLangRef.contacts.body)}
 
           <img src="/static/Typologie.jpg" />
         </section>
