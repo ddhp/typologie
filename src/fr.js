@@ -23,7 +23,8 @@ export default {
       'Le graphisme du premier numéro a été dessiné par Anne-Lise Bachelier et Lisa Sturacci.',
       'Typologie est co-édité avec les éditions B42.',
       'La distribution des livres sera assuré par les Belles-Lettres en France en Belgique et en Suisse. Dans les autres pays, la distribution sera pris en charge par Idea Books.',
-      'contact@collectionstypologie.com @collectionstypologie'
+      'contact@collectionstypologie.com',
+      '@collectionstypologie'
     ]
   }
 }

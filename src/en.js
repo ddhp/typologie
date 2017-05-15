@@ -20,7 +20,9 @@ export default {
       'The Collections Typologie is an independent publishing studio directed by Raphaël Daufresne and Thélonious Goupil. It was founded in 2016 by seven industrial designers.',
       'Their first project Typologie is an original idea of the team of the Collections Typologie : Guillaume Bloget, Raphaël Daufresne, Adrien Goubet, Thélonious Goupil, Guillaume Jandin, Alexandre d’Orsetti and Yun Li.',
       'The graphic design of the Typologie n°1 was conceived by Anne-Lise Bachelier and Lisa Sturacci. ',
-      'Typologie is co-published with éditions B42. The books will be distributed by Belles Lettres publishers in France and Belgium. Idea Books will be in charge of Global distribution outside of these countries.'
+      'Typologie is co-published with éditions B42. The books will be distributed by Belles Lettres publishers in France and Belgium. Idea Books will be in charge of Global distribution outside of these countries.',
+      'contact@collectionstypologie.com',
+      '@collectionstypologie'
     ]
   }
 }
