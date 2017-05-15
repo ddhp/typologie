@@ -118,7 +118,7 @@ export default class App extends Component {
         </div>
 
         <section className="landing" ref="landing">
-          <img src="/static/photo_couverture_maquette_typologie.jpg" />
+          <img src="/static/cover.jpg" />
         </section>
 
         <section id="aPropos" className="a-propos" ref="aPropos">
@@ -142,17 +142,25 @@ export default class App extends Component {
           </h2>
           {this.renderParapraph(currentLangRef.aPropos.body)}
 
-          <img src="/static/DSC_3958.jpg" />
+          <img src="/static/info-1.jpg" />
         </section>
 
         <section id="lePremierNumero" className="le-premier-numero" ref="lePremierNumero">
           <h2><span>{currentLangRef.lePremierNumero.title}</span></h2>
           {this.renderParapraph(currentLangRef.lePremierNumero.body)}
 
-          <img src="/static/photo_interieur_3_maquette_typologie.jpg" />
-          <img src="/static/photo_interieur_1_maquette_typologie2.jpg" />
-          <img src="/static/photo_interieur_4_maquette_typologie.jpg" />
-          <img src="/static/photo_4eme_couverture_maquette_typologie.jpg" />
+          <img src="/static/n1-1.jpg" />
+          <img src="/static/n1-2.jpg" />
+          <img src="/static/n1-3.jpg" />
+          <img src="/static/n1-4.jpg" />
+          <img src="/static/n1-5.jpg" />
+          <img src="/static/n1-6.jpg" />
+          <img src="/static/n1-7.jpg" />
+          <img src="/static/n1-8.jpg" />
+          <img src="/static/n1-9.jpg" />
+          <img src="/static/n1-10.jpg" />
+          <img src="/static/n1-11.jpg" />
+          <img className="cover" src="/static/n1-12.jpg" />
         </section>
 
         <section id="contacts" className="contacts" ref="contacts">

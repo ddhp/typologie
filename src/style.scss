@@ -54,15 +54,17 @@ a {
 
 section {
   position: relative;
-  margin-bottom: 10rem;
+  padding-bottom: 10rem;
 
   p {
+    position: relative;
     display: inline-block;
     width: 40%;
     margin-right: 20%;
     line-height: 1.2rem;
     margin-bottom: 0.5rem;
     margin-top: 0.5rem;
+    z-index: 1;
   }
 }
 
@@ -152,13 +154,19 @@ nav {
 }
 
 .a-propos {
+  overflow: hidden;
+
   h2 {
     position: relative;
     width: 40%;
   }
 
   img {
-    width: 40%;
+    width: 100%;
+    position: absolute;
+    right: -25%;
+    top: 5%;
+    z-index: 0;
   }
 
   .span--lang {
@@ -180,8 +188,6 @@ nav {
 }
 
 .le-premier-numero {
-  text-align: center;
-
   h2 {
     text-align: left;
   }
@@ -192,8 +198,15 @@ nav {
   }
 
   img {
+    display: block;
     margin: 0 auto;
     width: 65%;
+
+    &.cover {
+      width: 65%;
+      margin-top: 15vh;
+      margin-left: 1%;
+    }
   }
 }
 
